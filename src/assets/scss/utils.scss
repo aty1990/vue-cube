@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    
+}
+body,html,div,span,p,ul,li,button,a{
+    user-select: none; 
+    -webkit-user-select:none;
+
+}
+input[type=date]::-webkit-inner-spin-button { display: none; }
+input[type=date]::-webkit-clear-button {display: none; }
+input[type=date]::-webkit-datetime-edit-text {text-decoration: mintcream}
+button{
+    outline: none;
+    border:none;
+}
+body,
+html {
+    list-style: none;
+    height: 100%;
+    font-size: 14px;
+    overflow-x: hidden;
+    -webkit-font-smoothing:antialiased;
+}
+div.mint-swipe-indicator {
+    background: rgba(255,255,255,0.80);
+    border-radius:4px;
+    width:15px;
+    height:4px;
+    opacity: 1;
+}
+.mint-swipe-indicator.is-active{
+    width:25px;
+    border-radius:4px;
+}
+
+#app {
+    height: 100%;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    //font-family:"myFont";
+}
+[v-cloak] {
+  display: none;
+}
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+// flex布局
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-item{
+    flex:1;
+    text-align: center;
+}
+
+// flex垂直排位
+.vertical {
+    flex-direction: column;
+}
+
+// flex水平排位
+.row {
+    flex-direction: row;
+}
+// 定义项目的放大比例
+.grow{
+    flex-grow : 1;
+}
+// 元素左对齐
+.text-left{
+    justify-content: flex-start;
+}
+.text-right{
+    justify-content: flex-end;
+}
+// 元素顶对齐
+.all-top{
+    align-items: flex-start;
+} 
+.page-animate {
+     /*// 启用硬件加速*/
+    will-change: transform;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    transition: transform .4s linear;
+    background: #fff;
+    overflow: hidden;
+    position: fixed;
+    // box-shadow: 0 2px 15px #888888;
+    height: 100%;
+    width: 100%;
+    z-index: 99999;
+    left: 0;
+    top: 0;
+}
+
+.wrapper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+// 一行文本溢出显示...
+.on-line{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+}
+
