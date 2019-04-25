@@ -89,7 +89,7 @@ Vue.use(RecycleList)
 
 Vue.config.productionTip = false
 
-import '@/assets/scss/utils'
+import '@/assets/scss/app'
 
 new Vue({
   el: '#app',

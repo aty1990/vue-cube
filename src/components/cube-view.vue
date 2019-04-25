@@ -8,13 +8,12 @@
         props: {
             animateName: {
                 type: String,
-                default: "page-move",
-                required: true
+                default: "page-move"
             }
         },
         data(){
             return {
-                transitionName:this.animateName
+                transitionName:this.animateName?this.animateName:"page-move"
             }
         }
     }
@@ -27,7 +26,6 @@
   	.page-move-enter-active, .page-move-leave-active{
   		transition: transform .52s
   	}
-
     .page-up-enter, .page-up-leave-active{
         transform: translate(0,100%)
     }

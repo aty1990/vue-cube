@@ -1,11 +1,11 @@
 <template>
-    <div>
-        <div class="home">
+    <div class="home">
+        <div class="home-content">
             <cube-button :primary="true" @click.native="list">list</cube-button>
             <cube-button :primary="true" @click.native="tab">tab</cube-button>    
-        </div>  
+        </div>
         <cube-view></cube-view>  
-    </div>
+    </div>  
 </template>
 <script>
     import CubeView from '@/components/cube-view.vue'
@@ -29,14 +29,20 @@
     }
 </script>
 <style lang="scss" scoped>
+    @import '../../assets/scss/mixin';
     .home{
-        margin:0 10px;
         position: fixed;
         top:0;
         left: 0;
         bottom: 0;
         right: 0;
         overflow: hidden;
+    }
+    .home-content{
+        width: 100%;
+        height: 100%;
+        overflow-y:auto;
+        padding:0 px2vw(16); 
     }
     .cube-btn{
         margin-top: 10px;

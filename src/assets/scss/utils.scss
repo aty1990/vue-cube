@@ -18,33 +18,9 @@ button{
     outline: none;
     border:none;
 }
-body,
-html {
-    list-style: none;
-    height: 100%;
-    font-size: 14px;
-    overflow-x: hidden;
-    -webkit-font-smoothing:antialiased;
-}
-div.mint-swipe-indicator {
-    background: rgba(255,255,255,0.80);
-    border-radius:4px;
-    width:15px;
-    height:4px;
-    opacity: 1;
-}
-.mint-swipe-indicator.is-active{
-    width:25px;
-    border-radius:4px;
-}
 
-#app {
-    height: 100%;
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #2c3e50;
-    //font-family:"myFont";
+input{
+    font-size: px2vw(14);
 }
 [v-cloak] {
   display: none;
@@ -55,6 +31,75 @@ div.mint-swipe-indicator {
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
+}
+
+@each $i in 10,11,12,13,14,15,16,18,20,22,24,28,30,32,36,60 { 
+    .font-size-#{$i} {
+        font-size: px2vw($i);
+    }
+}
+
+@each $i in 1,2,3,4,5,6,7,8,9,10 {
+    .scale-#{$i} {
+        transform: scale($i/10);
+    }
+}
+
+// 动画延迟
+@each $i in 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20 {
+    $num: $i * 0.06s;
+    .delay-#{$i} {
+        animation-delay:$num;
+        -webkit-animation-delay:$num; 
+    }
+}
+
+@each $i in 10,12,14,16,20,22,24,28,30,32,36 {
+    .line-height-#{$i} {
+        line-height: px2vw($i);
+    }
+}
+
+@each $i in 1,2,3,4,5,6,7 {
+    .border-top-#{$i} {
+        border-top: px2vw($i) solid #E5E5E5!important; 
+    }
+}
+
+@each $i in 0,1,2,3,4,5,6,7,8,10,11,12,13,14,15,16,17,18,20,21,22,23,24,25,26,27,28,30,32,33,35,36,37,39,40,44,46,48,50,52,54,56,59,60,64,72,80,92,96,100,105,114,120 {
+    .mg-all-#{$i} {
+        margin: px2vw($i);
+    }
+    .mgt-#{$i} {
+        margin-top: px2vw($i);
+    }
+    .mgr-#{$i} {
+        margin-right: px2vw($i);
+    }
+    .mgb-#{$i} {
+        margin-bottom: px2vw($i);
+    }
+    .mgl-#{$i} {
+        margin-left: px2vw($i);
+    }
+    .pd-all-#{$i} {
+        padding: px2vw($i);
+    }
+    .pdt-#{$i} {
+        padding-top: px2vw($i);
+    }
+    .pdr-#{$i} {
+        padding-right: px2vw($i);
+    }
+    .pdb-#{$i} {
+        padding-bottom: px2vw($i);
+    }
+    .pdl-#{$i} {
+        padding-left: px2vw($i);
+    }
+    .radius-#{$i} {
+        border-radius: px2vw($i);
+    }
 }
 
 // flex布局
@@ -92,31 +137,6 @@ div.mint-swipe-indicator {
 .all-top{
     align-items: flex-start;
 } 
-.page-animate {
-     /*// 启用硬件加速*/
-    will-change: transform;
-    -webkit-transform-style: preserve-3d;
-    -moz-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    -webkit-backface-visibility: hidden;
-    transition: transform .4s linear;
-    background: #fff;
-    overflow: hidden;
-    position: fixed;
-    // box-shadow: 0 2px 15px #888888;
-    height: 100%;
-    width: 100%;
-    z-index: 99999;
-    left: 0;
-    top: 0;
-}
-
-.wrapper {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
 
 // 一行文本溢出显示...
 .on-line{
@@ -126,5 +146,34 @@ div.mint-swipe-indicator {
     width: 100%;
     height: 22px;
     line-height: 22px;
+}
+// 多行文本显示...
+.text-deal{
+    @include text(2);  
+}
+.text-deal1{
+    @include text(1);  
+    
+}
+// 固定在底部的按钮
+.fixed-btm-btn{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    width:100%;
+    background:#fff;
+}
+
+//遮罩层
+.mask{
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;  
+    background: #000;
+    z-index: 9999;
+    animation: changeBgColor 0.52s forwards;
 }
 
