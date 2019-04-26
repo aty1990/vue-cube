@@ -3,6 +3,8 @@
         <div class="home-content">
             <cube-button :primary="true" @click.native="list">list</cube-button>
             <cube-button :primary="true" @click.native="tab">tab</cube-button>    
+            <cube-button :primary="true" @click.native="scroll">scroll</cube-button>    
+            <cube-button :primary="true" @click.native="slide">slide</cube-button>    
         </div>
         <cube-view></cube-view>  
     </div>  
@@ -24,6 +26,12 @@
             },
             tab(){
                 this.$router.push("/tab")
+            },
+            scroll(){
+                this.$router.push("/scroll")
+            },
+            slide(){
+                this.$router.push("/slide")
             }
         }
     }
