@@ -1,10 +1,11 @@
 <template>
     <div class="home">
         <div class="home-content">
-            <cube-button :primary="true" @click.native="list">list</cube-button>
-            <cube-button :primary="true" @click.native="tab">tab</cube-button>    
-            <cube-button :primary="true" @click.native="scroll">scroll</cube-button>    
-            <cube-button :primary="true" @click.native="slide">slide</cube-button>    
+            <cube-button :primary="true" @click.native="toPage('list')">list</cube-button>
+            <cube-button :primary="true" @click.native="toPage('tab')">tab</cube-button>    
+            <cube-button :primary="true" @click.native="toPage('scroll')">scroll</cube-button>    
+            <cube-button :primary="true" @click.native="toPage('slide')">slide</cube-button>    
+            <cube-button :primary="true" @click.native="toPage('pull')">pull</cube-button>    
         </div>
         <cube-view></cube-view>  
     </div>  
@@ -21,17 +22,8 @@
             }
         },
         methods: {
-            list(){
-                this.$router.push("/list")
-            },
-            tab(){
-                this.$router.push("/tab")
-            },
-            scroll(){
-                this.$router.push("/scroll")
-            },
-            slide(){
-                this.$router.push("/slide")
+            toPage(router){
+                this.$router.push(router)
             }
         }
     }

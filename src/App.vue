@@ -17,4 +17,16 @@ export default {
         -moz-osx-font-smoothing: grayscale;
         overflow: hidden;
     }
+    .page-move-enter, .page-move-leave-active{
+        transform: translate(100%, 0)
+    }
+    .page-move-enter-active, .page-move-leave-active{
+        transition: transform .52s
+    }
+    .page-up-enter, .page-up-leave-active{
+        transform: translate(0,100%)
+    }
+    .page-up-enter-active, .page-up-leave-active{
+        transition: transform .52s
+    }
 </style>

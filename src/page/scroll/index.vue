@@ -1,19 +1,21 @@
 <template>
-  	<cube-page type="scroll-view" title="Scroll">
-	    <div slot="content" class="scroll-wrapper">
-	        <div class="scroll-list-wrap">
-	          	<cube-scroll
-		            ref="scroll"
-		            :options="options"
-		            @pulling-up="onPullingUp"
-		            :data="items">
-					<ul class="ul">
-						<li v-for="item in items" class="item">{{item.label}}</li>
-					</ul>
-	          	</cube-scroll>
-	        </div>
-	    </div>
-  	</cube-page>
+	<transition name="page-move">
+	  	<cube-page type="scroll-view" title="Scroll">
+		    <div slot="content" class="scroll-wrapper">
+		        <div class="scroll-list-wrap">
+		          	<cube-scroll
+			            ref="scroll"
+			            :options="options"
+			            @pulling-up="onPullingUp"
+			            :data="items">
+						<ul class="ul">
+							<li v-for="item in items" class="item">{{item.label}}</li>
+						</ul>
+		          	</cube-scroll>
+		        </div>
+		    </div>
+	  	</cube-page>
+  	</transition>
 </template>
 <script>
 	import Vue from 'vue'

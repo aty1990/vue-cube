@@ -5,6 +5,7 @@ import Home from '@/page/home/home'
 import List from '@/page/list/index'
 import Scroll from '@/page/scroll/index'
 import Slide from '@/page/slide/index'
+import Pull from '@/page/scroll/pull'
 Vue.use(Router)
 
 export default new Router({
@@ -21,7 +22,8 @@ export default new Router({
 	      		{ path:"/list",name:"list",component:List },
 	      		{ path:"/tab",name:"tab",component:Tab },
 	      		{ path:"/scroll",name:"scroll",component:Scroll },
-	      		{ path:"/slide",name:"slide",component:Slide }
+	      		{ path:"/slide",name:"slide",component:Slide },
+	      		{ path:"/pull",name:"pull",component:Pull },
 	      	]
 	    }
   	]

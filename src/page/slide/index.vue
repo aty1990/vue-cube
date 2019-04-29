@@ -1,20 +1,22 @@
 <template>
-  	<cube-page type="scroll-view" title="slide">
-	    <div slot="content" class="scroll-wrapper">
-	        <div class="slide-container-v">
-		        <cube-slide
-		          :data="items"
-		          :loop="loop"
-		          :showDots="false"
-		          direction="vertical"
-		          @change="change">
-		          <div v-for="img in items">
-		          		<img :src="img.image" width="100%" height="100%">
-		          </div>
-		        </cube-slide>
+	<transition name="page-move">
+	  	<cube-page type="scroll-view" title="slide">
+		    <div slot="content" class="scroll-wrapper">
+		        <div class="slide-container-v">
+			        <cube-slide
+			          :data="items"
+			          :loop="loop"
+			          :showDots="false"
+			          direction="vertical"
+			          @change="change">
+			          <div v-for="img in items">
+			          		<img :src="img.image" width="100%" height="100%">
+			          </div>
+			        </cube-slide>
+			    </div>
 		    </div>
-	    </div>
-  	</cube-page>
+	  	</cube-page>
+  	</transition>
 </template>
 <script>
 	import Vue from 'vue'
