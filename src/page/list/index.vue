@@ -1,6 +1,6 @@
 <template>
     <transition name="page-move" @after-enter="afterEnter" @after-leave="afterLeave">
-        <cube-page type="button-view" title="list">
+        <cube-page title="list">
     		<div slot="content" class="list-content pd-all-10">
     			<cube-button @click="showTimePicker">TimePicker</cube-button>
                 <cube-scroll
@@ -12,6 +12,8 @@
                         <li v-for="item in items" class="list-item flex">{{ item }}</li>
                     </ul>
                 </cube-scroll>
+
+                <cube-button :primary="true" @click.native="toPage('about')">about</cube-button> 
     		</div>
     	</cube-page>
     </transition>
@@ -58,6 +60,9 @@
             },
             afterLeave(){
                 console.log("afterLeave")
+            },
+            toPage(router){
+                this.$router.push(router)
             }
         }
     }

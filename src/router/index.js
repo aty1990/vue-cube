@@ -8,6 +8,7 @@ import Slide from '@/page/slide/index'
 import Pull from '@/page/scroll/pull'
 import Help from '@/page/help/index'
 import About from '@/page/help/about'
+import We from '@/page/help/we'
 Vue.use(Router)
 
 export default new Router({
@@ -22,11 +23,11 @@ export default new Router({
 	      	meta:{index:0},
 	      	component: Home,
 	      	children:[
-	      		{ path:"/list",name:"list",component:List },
-	      		{ path:"/tab",name:"tab",component:Tab },
-	      		{ path:"/scroll",name:"scroll",component:Scroll },
-	      		{ path:"/slide",name:"slide",component:Slide },
-	      		{ path:"/pull",name:"pull",component:Pull }
+	      		{ path:"/list",name:"list",component:List,meta:{index:0} },
+	      		{ path:"/tab",name:"tab",component:Tab,meta:{index:0} },
+	      		{ path:"/scroll",name:"scroll",component:Scroll,meta:{index:0} },
+	      		{ path:"/slide",name:"slide",component:Slide,meta:{index:0} },
+	      		{ path:"/pull",name:"pull",component:Pull,meta:{index:0} }
 	      	]
 	    },
 	    {
@@ -40,6 +41,12 @@ export default new Router({
 	    	name:"about",
 	    	meta:{index:2},
 	    	component:About 
-	    }
+	    },
+	    { 
+	    	path:"/we",
+	    	name:"we",
+	    	meta:{index:3},
+	    	component:We 
+	    },
   	]
 })

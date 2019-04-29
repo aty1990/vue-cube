@@ -1,6 +1,6 @@
 <template>
 	<transition name="page-move">
-	  	<cube-page type="scroll-view" title="Scroll">
+	  	<cube-page title="Scroll">
 		    <div slot="content" class="scroll-wrapper">
 		        <div class="scroll-list-wrap">
 		          	<cube-scroll

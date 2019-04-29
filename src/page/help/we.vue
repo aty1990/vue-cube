@@ -1,20 +1,19 @@
 <template>
-	<cube-page type="button-view" title="help">
-		<div slot="content" class="help-content pd-all-10">
-			<cube-button :primary="true" @click.native="toPage('about')">list</cube-button>
+	<cube-page type="we-page" title="we" zIndex="13">
+		<div slot="content" class="we-content pd-all-10">
+			we
 		</div>
 	</cube-page>	
 </template>
 <script>
     import CubePage from '@/components/cube-page.vue'
     export default {
-        name: 'list',
+        name: 'we',
         components: {
             CubePage
         },
         data () {
-            return {
-            }
+            return {}
         },
         methods: {
             toPage(router){
@@ -24,8 +23,10 @@
     }
 </script>
 <style lang="scss">
-    .help-content{
-        background: pink;
-        height: 100%;
+    .we-page{
+        .we-content{
+	        background: green;
+	        height: 100%;
+	    }
     }
 </style>

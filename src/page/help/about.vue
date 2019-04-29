@@ -1,7 +1,7 @@
 <template>
-	<cube-page type="button-view" title="about">
+	<cube-page type="about-page" title="about">
 		<div slot="content" class="about-content pd-all-10">
-			about
+			<cube-button :primary="true" @click.native="toPage('we')">we</cube-button>
 		</div>
 	</cube-page>	
 </template>
@@ -16,11 +16,16 @@
             return {}
         },
         methods: {
-            
+            toPage(router){
+                this.$router.push(router)
+            }
         }
     }
 </script>
 <style lang="scss">
+    .about-page{
+        z-index: 12;
+    }
     .about-content{
         background: yellow;
         height: 100%;

@@ -1,5 +1,5 @@
 <template>
-  	<div class="cube-page" :class="type">
+  	<div class="cube-page" :class="type" :style="{'z-index':zIndex}">
 	    <header class="header">
 	      	<h1>{{title}}</h1>
             <span @click="back" class="cubeic-back" v-show="title!='home'">
@@ -28,6 +28,10 @@
         	type: String,
         	default: ''
       	},
+        zIndex:{
+            type: String,
+            default: ''
+        },
       	content: {
         	type: String,
         	default: ''
