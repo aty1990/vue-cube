@@ -6,6 +6,8 @@
             <cube-button :primary="true" @click.native="toPage('scroll')">scroll</cube-button>    
             <cube-button :primary="true" @click.native="toPage('slide')">slide</cube-button>    
             <cube-button :primary="true" @click.native="toPage('pull')">pull</cube-button>    
+            <cube-button :primary="true" @click.native="toPage('help')">help</cube-button>    
+            <cube-button :primary="true" @click.native="toPage('about')">about</cube-button>    
         </div>
         <cube-view></cube-view>  
     </div>  
@@ -20,6 +22,9 @@
         data () {
             return {
             }
+        },
+        mounted(){
+            //alert(333);
         },
         methods: {
             toPage(router){
