@@ -10,7 +10,6 @@ import Help from '@/page/help/index'
 import About from '@/page/help/about'
 import We from '@/page/help/we'
 Vue.use(Router)
-
 export default new Router({
   	routes: [
   		{
